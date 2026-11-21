@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alternance Hunter</title>
+  <meta name="description" content="Outil personnel et non commercial de recherche d'alternance dans le secteur bancaire.">
+  <meta name="robots" content="noindex">
+  <style>
+    :root {
+      --navy-900: #0d1b33;
+      --navy-800: #152746;
+      --navy-600: #264372;
+      --navy-100: #d5e0f0;
+      --gray-50: #f9fafb;
+      --gray-200: #e5e7eb;
+      --gray-600: #4b5563;
+      --gray-900: #111827;
+      --white: #ffffff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--gray-50);
+      color: var(--gray-900);
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.6;
+    }
+    header {
+      background: var(--navy-900);
+      color: var(--white);
+      padding: 56px 16px 48px;
+    }
+    .wrap { max-width: 760px; margin: 0 auto; }
+    .brand { display: flex; align-items: center; gap: 10px; font-weight: 600; }
+    .logo {
+      display: grid; place-items: center;
+      width: 36px; height: 36px; border-radius: 8px;
+      background: var(--white); color: var(--navy-900); font-weight: 700; font-size: 14px;
+    }
+    h1 { font-size: clamp(1.8rem, 5vw, 2.4rem); line-height: 1.2; margin: 28px 0 12px; letter-spacing: -0.01em; }
+    header p { color: var(--navy-100); margin: 0; max-width: 60ch; }
+    main { padding: 40px 16px 56px; }
+    section {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: 10px;
+      padding: 24px;
+      margin-bottom: 20px;
+    }
+    h2 { font-size: 1.1rem; color: var(--navy-900); margin: 0 0 10px; }
+    p { margin: 0 0 10px; }
+    ul { margin: 0; padding-left: 20px; }
+    li { margin-bottom: 6px; }
+    .tag {
+      display: inline-block; margin: 0 6px 6px 0; padding: 2px 10px;
+      border-radius: 999px; background: var(--navy-100); color: var(--navy-800);
+      font-size: 0.85rem; font-weight: 500;
+    }
+    footer { color: var(--gray-600); font-size: 0.85rem; text-align: center; padding: 0 16px 40px; }
+    a { color: var(--navy-600); }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <div class="brand"><span class="logo">AH</span> Alternance Hunter</div>
+      <h1>Un outil personnel pour chercher une alternance dans la banque</h1>
+      <p>
+        Alternance Hunter est une application personnelle et non commerciale. Elle aide un étudiant
+        en BTS à trouver, trier et suivre des offres d'alternance dans le secteur bancaire.
+      </p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section>
+      <h2>À quoi sert l'application</h2>
+      <ul>
+        <li>Rassembler en un seul endroit des offres d'alternance issues de sources publiques autorisées.</li>
+        <li>Repérer les doublons et les offres expirées.</li>
+        <li>Classer les offres selon leur pertinence pour un projet professionnel bancaire.</li>
+        <li>Suivre ses candidatures, ses relances et ses entretiens.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Utilisation des données de l'API France Travail</h2>
+      <p>L'application utilise l'API « Offres d'emploi » de France Travail pour :</p>
+      <ul>
+        <li>rechercher des offres en <strong>contrat d'apprentissage ou de professionnalisation</strong>
+          liées à la banque, dans les zones géographiques choisies par l'utilisateur ;</li>
+        <li>afficher ces offres à l'utilisateur, avec un <strong>lien vers l'annonce originale</strong>
+          sur le site de France Travail ;</li>
+        <li>les noter et les suivre dans un espace personnel.</li>
+      </ul>
+      <p style="margin-top:12px">
+        <span class="tag">Usage strictement personnel</span>
+        <span class="tag">Aucune revente ni rediffusion</span>
+        <span class="tag">Aucune candidature envoyée automatiquement</span>
+      </p>
+    </section>
+
+    <section>
+      <h2>Confidentialité et sécurité</h2>
+      <ul>
+        <li>L'application fonctionne <strong>en local</strong>, sur l'ordinateur de son utilisateur. Elle n'est pas
+          accessible en ligne.</li>
+        <li>Les données (offres, candidatures, profil) sont stockées localement et ne sont partagées avec personne.</li>
+        <li>Les identifiants d'API sont conservés dans un fichier de configuration local, jamais publiés.</li>
+        <li>Les sources sont interrogées avec modération (une collecte par jour), dans le respect de leurs
+          conditions d'utilisation.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Sources d'offres</h2>
+      <p>
+        API Offres d'emploi de France Travail, API publique La bonne alternance, flux RSS publiés par des
+        employeurs, pages carrières dont les conditions d'utilisation le permettent, et annonces ajoutées
+        à la main par l'utilisateur.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    Alternance Hunter · projet personnel étudiant, sans but commercial.
+  </footer>
+</body>
+</html>
